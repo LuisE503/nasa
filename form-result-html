@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Form submission result for the Contact page.">
+  <meta name="author" content="Your Name">
+  <title>Space Snapshot - Form Result</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="favicon.ico" alt="Site logo" class="logo">
+    <h1>Form Submission Result</h1>
+    <nav>
+      <div class="hamburger">&#9776;</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="apod.html">APOD</a></li>
+        <li><a href="mars.html">Mars Photos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="form-result">
+      <h2>Submitted Data</h2>
+      <div id="result"></div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Space Snapshot</p>
+    <p><a href="https://your-video-url.com" target="_blank">Video Demonstration</a></p>
+  </footer>
+  
+  <script>
+    // Procesa los parámetros de URL y los muestra en una lista
+    const params = new URLSearchParams(window.location.search);
+    const resultDiv = document.getElementById('result');
+    let output = '<ul>';
+    for (const [key, value] of params.entries()) {
+      output += `<li><strong>${key}</strong>: ${value}</li>`;
+    }
+    output += '</ul>';
+    resultDiv.innerHTML = output;
+  </script>
+</body>
+</html>
