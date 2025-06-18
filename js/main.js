@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Toggle del menú hamburger
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
   if (hamburger) {
@@ -104,11 +103,9 @@ function showModal(item) {
   `;
   document.body.appendChild(modal);
   
-  // Cierre mediante el botón de cierre
   modal.querySelector('.close-button').addEventListener('click', () => {
     document.body.removeChild(modal);
   });
-  // Cierre al hacer clic fuera de la modal-content
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
       document.body.removeChild(modal);
